@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				autoDrawBackground="false" height="32">
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" />
+		<s:State name="selected" />
+	</s:states>
+	<fx:Script>
+		<![CDATA[
+			
+			import flatSpark.utils.ColorUtils;
+			
+		]]>
+	</fx:Script>
+	
+	<s:Rect id="bgFill"
+			radiusX="4"
+			includeIn="hovered,selected"
+			left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor color="{ColorUtils.MidnightBlue}"
+						  color.selected="{ColorUtils.Turquoise}"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Label text="{data}" paddingRight="4" paddingTop="1" paddingBottom="1" paddingLeft="4" 
+			 verticalAlign="middle" height="100%" fontFamily="Lato" fontSize="15" fontWeight="normal" 
+			 fontStyle="normal" color="{ColorUtils.Clouds}" color.hovered="{ColorUtils.Silver}"/>
+	
+</s:ItemRenderer>

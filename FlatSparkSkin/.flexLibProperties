@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="flatSpark.skins.ButtonSkin"/>
+    <classEntry path="flatSpark.utils.ConfigSkin"/>
+    <classEntry path="flatSpark.enums.SizeEnum"/>
+    <classEntry path="flatSpark.enums.ColorSwatchEnum"/>
+    <classEntry path="flatSpark.utils.ColorUtils"/>
+    <classEntry path="flatSpark.utils.AwesomeUtils"/>
+    <classEntry path="flatSpark.enums.ButtonColorEnum"/>
+    <classEntry path="flatSpark.enums.BrandColorEnum"/>
+    <classEntry path="flatSpark.skins.TextInputSkin"/>
+    <classEntry path="flatSpark.components.TextInput"/>
+    <classEntry path="flatSpark.skins.ToggleSwitchSkin"/>
+    <classEntry path="flatSpark.components.ToggleSwitch"/>
+    <classEntry path="flatSpark.skins.CheckBoxSkin"/>
+    <classEntry path="flatSpark.components.CheckBox"/>
+    <classEntry path="flatSpark.components.RadioButton"/>
+    <classEntry path="flatSpark.skins.RadioButtonSkin"/>
+    <classEntry path="flatSpark.skins.PanelSkin"/>
+    <classEntry path="flatSpark.skins.TitleWindowSkin"/>
+    <classEntry path="flatSpark.skins.TitleWindowCloseButtonSkin"/>
+    <classEntry path="flatSpark.skins.AlertSkin"/>
+    <classEntry path="flatSpark.skins.ComboBoxSkin"/>
+    <classEntry path="flatSpark.skins.ComboBoxButtonSkin"/>
+    <classEntry path="flatSpark.skins.ComboBoxTextInputSkin"/>
+    <classEntry path="flatSpark.enums.ButtonSizeEnum"/>
+    <classEntry path="flatSpark.skins.DropDownListSkin"/>
+    <classEntry path="flatSpark.skins.DropDownListButtonSkin"/>
+    <classEntry path="flatSpark.skins.ScrollerSkin"/>
+    <classEntry path="flatSpark.skins.VScrollBarSkin"/>
+    <classEntry path="flatSpark.skins.HScrollBarSkin"/>
+    <classEntry path="flatSpark.skins.VScrollBarTrackSkin"/>
+    <classEntry path="flatSpark.skins.VScrollBarThumbSkin"/>
+    <classEntry path="flatSpark.skins.HScrollBarTrackSkin"/>
+    <classEntry path="flatSpark.skins.HScrollBarThumbSkin"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/awesome/FontAwesome.otf" sourcePath="flatSpark/assets/fonts/awesome/FontAwesome.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Black.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Black.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Black_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Black_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Light.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Light.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf"/>
+  </includeResources>
+  <namespaceManifests/>
+</flexLibProperties>

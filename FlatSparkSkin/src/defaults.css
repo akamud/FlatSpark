@@ -1,0 +1,131 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace components "flatSpark.components.*";
+
+
+@font-face { 
+	src: url("flatSpark/assets/fonts/awesome/FontAwesome.otf"); 
+	fontFamily: FontAwesome;
+	embedAsCFF: true;
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Regular.otf");
+	fontFamily: Lato; 
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf");
+	fontFamily: Lato;
+	fontStyle: italic;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Bold.otf");
+	fontFamily: Lato;
+	fontWeight: bold;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf");
+	fontFamily: Lato;
+	fontStyle: italic;
+	fontWeight: bold;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Light.otf");
+	fontFamily: LatoLight;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Light_Italic.otf");
+	fontFamily: LatoLight;
+	fontStyle: italic;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Hairline.otf");
+	fontFamily: LatoHairline;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf");
+	fontFamily: LatoHairline;
+	fontStyle: italic;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Black.otf");
+	fontFamily: LatoBlack;
+	embedAsCFF: true; 
+}
+
+@font-face {
+	src:url("flatSpark/assets/fonts/lato/Lato_Black_Italic.otf");
+	fontFamily: LatoBlack;
+	fontStyle: italic;
+	embedAsCFF: true; 
+}
+
+global
+{
+	modal-transparency: 0.98;
+	modal-transparency-blur: 0;
+	modal-transparency-color: #2c3e50;
+	
+/*	chromeColor: #294867;
+	color: #CEE7F4;
+	contentBackgroundColor: #39628C;
+	symbolColor: #000000;
+	rollOverColor: #355D89;
+	selectionColor: #294867;
+	focusColor: #333300;
+	accentColor: #6589AD;*/
+	
+}
+
+
+s|Application {
+	fontFamily: Lato, Helvetica, Arial, sans-serif;
+}
+
+components|Button {
+	skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+}
+
+components|TextInput {
+	skinClass: ClassReference("flatSpark.skins.TextInputSkin");
+}
+
+components|ToggleSwitch {
+	skinClass: ClassReference("flatSpark.skins.ToggleSwitchSkin");
+}
+
+components|CheckBox {
+	skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+}
+
+components|RadioButton {
+	skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+}
+
+s|TitleWindow {
+	skinClass: ClassReference("flatSpark.skins.TitleWindowSkin");
+}
+
+s|ComboBox {
+	skinClass: ClassReference("flatSpark.skins.ComboBoxSkin");
+}
+
+s|DropDownList {
+	skinClass: ClassReference("flatSpark.skins.DropDownListSkin");
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+			   minWidth="955" minHeight="600" xmlns:components="flatSpark.components.*" xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			
+			import flatSpark.enums.BrandColorEnum;
+			import flatSpark.enums.ButtonSizeEnum;
+			import flatSpark.enums.TextInputSizeEnum;
+			import flatSpark.skins.ScrollerSkin;
+			import flatSpark.utils.AwesomeUtils;
+			
+			
+			protected function clickButton(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				var testeTitleWindow:TestTitleWindow;	
+				testeTitleWindow = new TestTitleWindow();
+				testeTitleWindow.setStyle("modalTransparency",0.85);
+				testeTitleWindow.setStyle("modalTransparencyBlur",1);
+				testeTitleWindow.setStyle("modalTransparencyColor", 0x000000); //2c3e50
+				PopUpManager.addPopUp(testeTitleWindow, this, true);
+				
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace mx "library://ns.adobe.com/flex/mx";
+		@namespace components "flatSpark.components.*";
+		
+		s|ComboBox s|Scroller s|VScrollBar {
+			skinClass: ClassReference("flatSpark.skins.ScrollerSkin");
+		}
+		
+	</fx:Style>
+	<fx:Declarations>
+		<mx:ZipCodeValidator id="zipV" 
+							 source="{teste}" 
+							 property="text" 
+							 triggerEvent="change"/>
+	</fx:Declarations>
+	
+	<s:VGroup paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10" gap="20">
+		<s:HGroup gap="20" width="100%">
+			<components:Button label="Primary Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Primary}"/>
+			<components:Button label="Warning Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Warning}"/>
+			<components:Button label="Default Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Default}"/>
+			<components:Button label="Danger Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Danger}"/>
+		</s:HGroup>
+		<s:HGroup gap="20" width="100%">
+			<components:Button label="Success Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Success}"/>
+			<components:Button label="Inverse Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}"/>
+			<components:Button iconFont="{AwesomeUtils.fa_info_circle}" label="Info Button" height="{ButtonSizeEnum.Large}"  width="213" brand="{BrandColorEnum.Info}"/>
+			<components:Button label="Disabled Button" width="213" height="{ButtonSizeEnum.Large}" enabled="false" brand="{BrandColorEnum.Danger}"/>
+		</s:HGroup>
+		<s:HGroup gap="20" width="100%">
+			<components:Button label="Extra Small" height="{ButtonSizeEnum.ExtraSmall}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+			<components:Button label="Small" height="{ButtonSizeEnum.Small}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+			<components:Button label="Normal" height="{ButtonSizeEnum.Normal}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+			<components:Button label="Large" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}" />
+		</s:HGroup>
+		
+		<s:Label id="iconFont" color="0x000000" text="{AwesomeUtils.fa_flag}"
+				 textAlign="left" fontSize="100" fontFamily="FontAwesome">
+		</s:Label>
+				
+		<s:HGroup>
+			<components:TextInput id="teste" prompt="Error" />
+			<components:TextInput text="No Icon" />
+			<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}"/>
+			<components:TextInput enabled="false"  iconFont="{AwesomeUtils.fa_star}" text="disabled"/>
+		</s:HGroup>
+		<s:HGroup>
+			<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Small" height="{TextInputSizeEnum.Small}"/>
+			<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Normal" height="{TextInputSizeEnum.Normal}"/>
+			<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Large" height="{TextInputSizeEnum.Large}"/>
+		</s:HGroup>
+		
+		<s:HGroup>
+			<components:ToggleSwitch/>
+			<components:ToggleSwitch selectedLabel="Test 1" deselectedLabel="Test 2" selected="true"/>
+			<components:ToggleSwitch selectedLabel="Disabled" deselectedLabel="Disabled" selected="true" enabled="false"/>
+			<components:ToggleSwitch selectedLabel="Disabled" deselectedLabel="Disabled" enabled="false"/>
+		</s:HGroup>
+		
+		<s:HGroup>
+			<components:CheckBox label="Test"/>
+			<components:CheckBox label="Selecionado" selected="true"/>
+			<components:CheckBox label="Desabilitado" selected="true" enabled="false"/>
+			<components:CheckBox label="Desabilitado" enabled="false"/>
+		</s:HGroup>
+		
+		<s:HGroup>
+			<components:RadioButton label="Test" groupName="grupo1"/>
+			<components:RadioButton label="Test 2" selected="true" groupName="grupo1"/>
+			<components:RadioButton label="Desabilitado" groupName="grupo2" selected="true" enabled="false"/>
+			<components:RadioButton label="Desabilitado" groupName="grupo2"  enabled="false"/>
+		</s:HGroup>
+		
+		<s:HGroup>
+			<s:Button label="Open PopUp" click="{clickButton(event)}"/>
+			<s:Button label="Open Default" click="{clickButton(event)}"/>
+		</s:HGroup>
+		
+		<s:HGroup>
+			<s:ComboBox prompt="Select...">
+				<s:dataProvider>
+					<s:ArrayList>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+						<fx:String>Durche die Wuste</fx:String>
+						<fx:String>Samurai</fx:String>
+						<fx:String>Traumfabrik</fx:String>
+					</s:ArrayList>
+				</s:dataProvider>        
+			</s:ComboBox>
+			<s:DropDownList  width="200" id="dropDownLst" requireSelection="true">
+				<s:dataProvider>
+					<s:ArrayList source="[The,quick,brown,fox,jumps,over,the,lazy,dog]" />
+				</s:dataProvider>
+			</s:DropDownList> 
+		</s:HGroup>
+	</s:VGroup>
+</s:Application>

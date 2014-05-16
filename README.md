@@ -4,8 +4,8 @@ FlatSpark is a Spark Skin for Flex 4. We don't think Flex applications should lo
 It is inspired by the beautiful work done by [DesignModo](http://designmodo.github.io/Flat-UI/).
 
 Here's where we got so far:
-<p><img src="https://github.com/akamud/FlatSpark/master/sample.png" alt="Logo" style="max-width:100%;" /></p>
-<p><img src="https://github.com/akamud/FlatSpark/master/sample2.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample2.png" alt="Logo" style="max-width:100%;" /></p>
 
 Pull-requests are more than welcome!
 

@@ -92,7 +92,10 @@
 			
 			setPartCornerRadii(topMaskRect, withControls);  
 			setPartCornerRadii(background, withControls);
-			setPartCornerRadii(bottomMaskRect, withControls);
+			if (bottomMaskRect != null)
+			{
+				setPartCornerRadii(bottomMaskRect, withControls);
+			}
 			
             super.updateDisplayList(unscaledWidth, unscaledHeight);
         }

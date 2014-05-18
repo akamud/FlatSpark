@@ -9,6 +9,12 @@ Here's where we got so far:
 <p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample.png" alt="Logo" style="max-width:100%;" /></p>
 <p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample2.png" alt="Logo" style="max-width:100%;" /></p>
 
+New components:
+
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample3.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample4.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample5.png" alt="Logo" style="max-width:100%;" /></p>
+
 Pull-requests are more than welcome!
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 /* CSS file */
 @namespace s "library://ns.adobe.com/flex/spark";
 @namespace components "flatSpark.components.*";
+@namespace ns "http://flex.apache.org/experimental/ns";
 
 
 @font-face { 
@@ -122,10 +123,18 @@ s|TitleWindow {
 	skinClass: ClassReference("flatSpark.skins.TitleWindowSkin");
 }
 
+s|Panel {
+	skinClass: ClassReference("flatSpark.skins.PanelSkin");
+}
+
 s|ComboBox {
 	skinClass: ClassReference("flatSpark.skins.ComboBoxSkin");
 }
 
 s|DropDownList {
 	skinClass: ClassReference("flatSpark.skins.DropDownListSkin");
+}
+
+ns|ProgressBar {
+	skinClass: ClassReference("flatSpark.skins.ProgressBarSkin");
 }

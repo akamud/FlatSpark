@@ -83,47 +83,19 @@
          * @private
          */
         override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
-        {
-            if (getStyle("borderVisible") == true)
-            {
-                //border.visible = true;
-                background.left = background.top = background.right = background.bottom = 1;
-                contents.left = contents.top = contents.right = contents.bottom = 1;
-            }
-            else
-            {
-                //border.visible = false;
-                background.left = background.top = background.right = background.bottom = 0;
-                contents.left = contents.top = contents.right = contents.bottom = 0;
-            }
+        {            
+			dropShadow.tlRadius = cornerRadius;
+			dropShadow.trRadius = cornerRadius;
+			dropShadow.blRadius = cornerRadius;
+			dropShadow.brRadius = cornerRadius;
+			
+			setPartCornerRadii(topMaskRect);  
+			setPartCornerRadii(background);  
             
-            //dropShadow.visible = getStyle("dropShadowVisible");
-            
-            var cr:Number = getStyle("cornerRadius");
-            var withControls:Boolean = 
-                (currentState == "disabledWithControlBar" || 
-                 currentState == "normalWithControlBar");
-            
-            if (cornerRadius != cr)
-            {
-                cornerRadius = cr;
-                
-//                dropShadow.tlRadius = cornerRadius;
-//                dropShadow.trRadius = cornerRadius;
-//                dropShadow.blRadius = withControls ? cornerRadius : 0;
-//                dropShadow.brRadius = withControls ? cornerRadius : 0;
-                
-                setPartCornerRadii(topMaskRect, withControls); 
-                //setPartCornerRadii(border, withControls); 
-                setPartCornerRadii(background, withControls);                
-            }
-            
-            if (bottomMaskRect) setPartCornerRadii(bottomMaskRect, withControls); 
-            
-            //borderStroke.color = getStyle("borderColor");
-            //borderStroke.alpha = getStyle("borderAlpha");
-            backgroundFill.color = getStyle("backgroundColor");
-            backgroundFill.alpha = getStyle("backgroundAlpha");
+			if (bottomMaskRect != null)
+			{
+				setPartCornerRadii(bottomMaskRect);
+			}
             
             super.updateDisplayList(unscaledWidth, unscaledHeight);
         }
@@ -131,15 +103,15 @@
         /**
          * @private
          */  
-        private function setPartCornerRadii(target:Rect, includeBottom:Boolean):void
+        private function setPartCornerRadii(target:Rect):void
         {            
             target.topLeftRadiusX = cornerRadius;
             target.topRightRadiusX = cornerRadius;
-            target.bottomLeftRadiusX = includeBottom ? cornerRadius : 0;
-            target.bottomRightRadiusX = includeBottom ? cornerRadius : 0;
+            target.bottomLeftRadiusX = cornerRadius;
+            target.bottomRightRadiusX = cornerRadius;
         }
         
-        private var cornerRadius:Number;
+		private var cornerRadius:Number=4;
 		]]>
     </fx:Script>
     
@@ -152,16 +124,16 @@
     
     <!-- drop shadow can't be hittable so it stays sibling of other graphics -->
     <!--- @private -->
-<!--    <s:RectangularDropShadow id="dropShadow" blurX="20" blurY="20" alpha="0.32" distance="11" 
-                             angle="90" color="#000000" left="0" top="0" right="0" bottom="0"/>-->
+    <s:RectangularDropShadow id="dropShadow" blurX="4" distance="0" angle="90" alpha="1"
+                          color="{ColorUtils.Silver}" left="0" top="0" right="0" bottom="0"/>
     
     <!-- drop shadow can't be hittable so all other graphics go in this group -->
     <s:Group left="0" right="0" top="0" bottom="0">
         
         <!-- top group mask -->
         <!--- @private -->
-        <s:Group left="0" top="0" right="0" bottom="0" id="topGroupMask"> <!--<s:Group left="1" top="1" right="1" bottom="1" id="topGroupMask">-->
-            
+        <s:Group left="0" top="0" right="0" bottom="0" id="topGroupMask" >
+            <!--- @private -->
             <s:Rect id="topMaskRect" left="0" top="0" right="0" bottom="0">
                 <s:fill>
                     <s:SolidColor alpha="0"/>
@@ -171,8 +143,8 @@
         
         <!-- bottom group mask -->
         <!--- @private -->
-        <s:Group left="0" top="0" right="0" bottom="0" id="bottomGroupMask"   
-                 includeIn="normalWithControlBar, disabledWithControlBar"> <!--<s:Group left="1" top="1" right="1" bottom="1" id="bottomGroupMask"-->
+        <s:Group left="0" top="0" right="0" bottom="0" id="bottomGroupMask" 
+                 includeIn="normalWithControlBar, disabledWithControlBar">
             <!--- @private -->
             <s:Rect id="bottomMaskRect" left="0" top="0" right="0" bottom="0">
                 <s:fill>
@@ -181,37 +153,29 @@
             </s:Rect>
         </s:Group>
         
-        <!-- layer 1: border -->
-        <!--- @private -->
-<!--        <s:Rect id="border" left="0" right="0" top="0" bottom="0">
-            <s:stroke>
-                <s:SolidColorStroke id="borderStroke" weight="0" color="{ColorUtils.BelizeHole}"/>
-            </s:stroke>
-        </s:Rect>-->
-        
         <!-- layer 2: background fill -->
         <!--- Defines the appearance of the PanelSkin class's background. -->
-        <s:Rect id="background" left="1" top="1" right="1" bottom="1">
+        <s:Rect id="background" left="0" top="0" right="0" bottom="0">
             <s:fill>
                 <!--- @private
                       Defines the  PanelSkin class's background fill. The default color is 0xFFFFFF. -->
-                <s:SolidColor id="backgroundFill" color="#F2F5F7"/>
+                <s:SolidColor id="backgroundFill" color="0xFFFFFF"/>
             </s:fill>
         </s:Rect>
         
         <!-- layer 3: contents -->
         <!--- Contains the vertical stack of titlebar content and controlbar. -->
-        <s:Group left="1" right="1" top="1" bottom="1" id="contents">
+        <s:Group left="0" top="0" right="0" bottom="0" id="contents">
             <s:layout>
                 <s:VerticalLayout gap="0" horizontalAlign="justify" />
             </s:layout>
             
             <!--- @private -->
-            <s:Group id="topGroup" mask="{topGroupMask}"  height="56">
+            <s:Group id="topGroup" mask="{topGroupMask}">
                 
                 <!-- layer 0: title bar fill -->
                 <!--- @private -->
-                <s:Rect id="tbFill" left="0" right="0" top="0" bottom="1">
+                <s:Rect id="tbFill" left="0" right="0" top="0" bottom="0">
                     <s:fill>
 						<s:SolidColor color="{ColorUtils.PeterRiver}"/>
                     </s:fill>
@@ -220,34 +184,24 @@
                 <!-- layer 1: title bar highlight -->
                 <!--- @private -->
                 <s:Rect id="tbHilite" left="0" right="0" top="0" bottom="0">
-					<s:fill>
+                    <s:fill>
 						<s:SolidColor color="{ColorUtils.PeterRiver}"/>
-					</s:fill>
+                    </s:fill>
                 </s:Rect>
                 
                 <!-- layer 2: title bar divider -->
                 <!--- @private -->
                 <s:Rect id="tbDiv" left="0" right="0" height="1" bottom="0">
                     <s:fill>
-                        <s:SolidColor color="{ColorUtils.BelizeHole}"/>
+						<s:SolidColor color="{ColorUtils.BelizeHole}"/>
                     </s:fill>
-					
-					<s:filters>
-						<s:DropShadowFilter distance="1" angle="90" color="#ACAFB3"/>
-					</s:filters>
                 </s:Rect>
-
-				 
-				
-				
-				
-				
+                
                 <!-- layer 3: text -->
                 <!--- @copy spark.components.Panel#titleDisplay -->
-                <s:Label id="titleDisplay" maxDisplayedLines="1" fontFamily="Lato" fontSize="17" fontStyle="normal" color="#FFFFFF"
-                         left="9" right="3" top="1" bottom="0" minHeight="30"
-                         verticalAlign="middle" textAlign="start" fontWeight="bold">
-                </s:Label>
+				<s:Label id="titleDisplay" maxDisplayedLines="1"  fontFamily="Lato" fontSize="15" fontStyle="normal" color="#FFFFFF"
+						 left="15" right="5" top="2" bottom="0" minHeight="36" height="36"
+						 verticalAlign="middle" fontWeight="bold" />
             </s:Group>
             
             <!--
@@ -266,35 +220,29 @@
                 <s:Group left="0" right="0" top="0" bottom="0" mask="{bottomGroupMask}">
 
                     <!-- layer 0: control bar divider line -->
-                    <s:Rect left="0" right="0" top="0" height="1" alpha="0.22">
+                    <s:Rect left="0" right="0" top="0" height="1" alpha="0.5">
                         <s:fill>
-                            <s:SolidColor color="0x000000" />
+							<s:SolidColor color="{ColorUtils.Silver}" />
                         </s:fill>
                     </s:Rect>
                     
                     <!-- layer 1: control bar highlight -->
                     <s:Rect left="0" right="0" top="1" bottom="0">
-                        <s:stroke>
-                            <s:LinearGradientStroke rotation="90" weight="1">
-                                <s:GradientEntry color="0xE5E5E5" />
-                                <s:GradientEntry color="0xD8D8D8" />
-                            </s:LinearGradientStroke>
-                        </s:stroke>
+						<s:fill>
+							<s:SolidColor color="{ColorUtils.Clouds}" />
+						</s:fill>
                     </s:Rect>
                     
                     <!-- layer 2: control bar fill -->
-                    <s:Rect left="1" right="1" top="2" bottom="1">
-                        <s:fill>
-                            <s:LinearGradient rotation="90">
-                                <s:GradientEntry color="0xDADADA" />
-                                <s:GradientEntry color="0xC5C5C5" />
-                            </s:LinearGradient>
-                        </s:fill>
+                    <s:Rect left="0" right="0" top="1" bottom="0">
+						<s:fill>
+							<s:SolidColor color="{ColorUtils.Clouds}" />
+						</s:fill>
                     </s:Rect>
                 </s:Group>
                 <!-- layer 3: control bar -->
                 <!--- @copy spark.components.Panel#controlBarGroup -->
-                <s:Group id="controlBarGroup" left="0" right="0" top="1" bottom="1" minWidth="0" minHeight="0">
+                <s:Group id="controlBarGroup" left="0" right="0" top="0" bottom="0" minWidth="0" minHeight="0">
                     <s:layout>
                         <s:HorizontalLayout paddingLeft="10" paddingRight="10" paddingTop="7" paddingBottom="7" gap="10" />
                     </s:layout>

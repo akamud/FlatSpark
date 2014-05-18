@@ -17,7 +17,6 @@
     <classEntry path="flatSpark.components.CheckBox"/>
     <classEntry path="flatSpark.components.RadioButton"/>
     <classEntry path="flatSpark.skins.RadioButtonSkin"/>
-    <classEntry path="flatSpark.skins.PanelSkin"/>
     <classEntry path="flatSpark.skins.TitleWindowSkin"/>
     <classEntry path="flatSpark.skins.TitleWindowCloseButtonSkin"/>
     <classEntry path="flatSpark.skins.AlertSkin"/>
@@ -34,20 +33,22 @@
     <classEntry path="flatSpark.skins.VScrollBarThumbSkin"/>
     <classEntry path="flatSpark.skins.HScrollBarTrackSkin"/>
     <classEntry path="flatSpark.skins.HScrollBarThumbSkin"/>
+    <classEntry path="flatSpark.skins.ProgressBarSkin"/>
+    <classEntry path="flatSpark.skins.PanelSkin"/>
   </includeClasses>
   <includeResources>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold.otf"/>
     <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular.otf"/>
     <resourceEntry destPath="flatSpark/assets/fonts/awesome/FontAwesome.otf" sourcePath="flatSpark/assets/fonts/awesome/FontAwesome.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf"/>
+    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf"/>
     <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Black.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Black.otf"/>
     <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Black_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Black_Italic.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Bold_Italic.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Hairline_Italic.otf"/>
     <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Light.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Light.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Light_Italic.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular.otf"/>
-    <resourceEntry destPath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf" sourcePath="flatSpark/assets/fonts/lato/Lato_Regular_Italic.otf"/>
   </includeResources>
   <namespaceManifests/>
 </flexLibProperties>

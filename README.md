@@ -6,14 +6,14 @@ It is inspired by the beautiful work done by [DesignModo](http://designmodo.gith
 Access the demo: [http://www.flatsparkskin.com](http://www.flatsparkskin.com)
 
 Here's where we got so far:
-<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample.png" alt="Logo" style="max-width:100%;" /></p>
-<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample2.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample.png" alt="Example 1" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample2.png" alt="Example 2" style="max-width:100%;" /></p>
 
 New components:
 
-<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample3.png" alt="Logo" style="max-width:100%;" /></p>
-<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample4.png" alt="Logo" style="max-width:100%;" /></p>
-<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample5.png" alt="Logo" style="max-width:100%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample3.png" alt="Example 3" style="max-width:50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample4.png" alt="Example 4" style="max-width:50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/akamud/FlatSpark/master/sample5.png" alt="Example 5" style="max-width:50%;" /></p>
 
 Pull-requests are more than welcome!
 

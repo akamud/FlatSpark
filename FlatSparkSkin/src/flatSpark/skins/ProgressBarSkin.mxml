@@ -51,6 +51,6 @@
 		includeInLayout="{progressBox.width > percentDisplay.width + 4}"/>
 		-->
 	</s:Group>
-	<s:Label id="percentDisplay" left="2" right="2" verticalCenter="0" verticalAlign="middle" color="{(hostComponent.currentProgress/hostComponent.totalProgress) > 0.5 ? 0xFFFFFF : ColorUtils.Turquoise}" fontFamily="Lato" fontWeight="bold" fontSize="13" textAlign="center" />
-	
+	<s:Label id="percentDisplay" left="2" right="2" verticalCenter="0" verticalAlign="middle" color="{ColorUtils.WetAsphalt}" fontFamily="Lato" fontWeight="bold" fontSize="13" textAlign="center" />
+
 </s:Skin>

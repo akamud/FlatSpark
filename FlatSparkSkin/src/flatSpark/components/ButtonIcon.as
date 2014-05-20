@@ -5,7 +5,7 @@ package flatSpark.components
 	
 	import flatSpark.enums.BrandColorEnum;
 
-	public class Button extends spark.components.Button
+	public class ButtonIcon extends spark.components.Button
 	{
 
 		[Bindable]
@@ -15,7 +15,7 @@ package flatSpark.components
 		public var brand:int = BrandColorEnum.Default;
 
 
-		public function Button()
+		public function ButtonIcon()
 		{
 			super();
 		}

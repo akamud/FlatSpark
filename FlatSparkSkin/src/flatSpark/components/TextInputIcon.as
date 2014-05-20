@@ -4,12 +4,12 @@ package flatSpark.components
 	
 	import spark.components.TextInput;
 	
-	public class TextInput extends spark.components.TextInput
+	public class TextInputIcon extends spark.components.TextInput
 	{
 		[Bindable]
 		public var iconFont:String;
 		
-		public function TextInput()
+		public function TextInputIcon()
 		{
 			super();
 		}

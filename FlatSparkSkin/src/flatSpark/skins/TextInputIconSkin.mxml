@@ -27,7 +27,7 @@
         /** 
          * @copy spark.skins.spark.ApplicationSkin#hostComponent
          */
-        [HostComponent("spark.components.TextInput")]
+        [HostComponent("flatSpark.components.TextInputIcon")]
     ]]>
     </fx:Metadata> 
 	
@@ -211,11 +211,13 @@
 			protected function textDisplay_focusInHandler(event:FocusEvent):void
 			{
 				borderStroke.color = ColorUtils.Asbestos;
+				iconFont.setStyle("color", ColorUtils.Asbestos);
 			}
 			
 			protected function textDisplay_focusOutHandler(event:FocusEvent):void
 			{
 				borderStroke.color = ColorUtils.Silver;
+				iconFont.setStyle("color", ColorUtils.Silver);
 			}
 			
 			private static function getFontSize(height:int):int
@@ -319,4 +321,10 @@
                 includeIn="normalWithPrompt,disabledWithPrompt" 
                 includeInLayout="false"
                 />
+	<s:Label id="iconFont" color="{ColorUtils.Silver}" color.disabledStates="{ColorUtils.Silver}" text="{hostComponent.iconFont}"
+			 textAlign="right" fontSize="{getIconSize(hostComponent.height)}" fontFamily="FontAwesome" fontStyle="normal"
+			 maxDisplayedLines="1" mouseChildren="false" mouseEnabled="false"
+			 horizontalCenter="0" verticalCenter="0" verticalAlign="middle"
+			 left="8" right="8" top="2" bottom="2" includeInLayout="{iconFont != null}">
+	</s:Label>
 </s:SparkSkin>

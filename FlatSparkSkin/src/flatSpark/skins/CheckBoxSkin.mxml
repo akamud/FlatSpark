@@ -28,7 +28,7 @@
         /** 
          * @copy spark.skins.spark.ApplicationSkin#hostComponent
          */
-        [HostComponent("flatSpark.components.CheckBox")]
+        [HostComponent("spark.components.CheckBox")]
     ]]>
     </fx:Metadata> 
     

@@ -1,3 +1,7 @@
+/***
+ * ToggleSwitch based on the example by Yonas Kolb posted here: http://yonaskolb.com/blog/2012/1/18/flex-toggle-switch-spark-skin.html
+ ***/ 
+
 package flatSpark.components
 {
 	import spark.components.CheckBox;

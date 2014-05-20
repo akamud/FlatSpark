@@ -2,6 +2,57 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
 			   minWidth="955" minHeight="600" xmlns:components="flatSpark.components.*" xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ns="http://flex.apache.org/experimental/ns">
 	
+	<fx:Style>
+		@namespace ns "http://flex.apache.org/experimental/ns";
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace mx "library://ns.adobe.com/flex/mx";
+		@namespace components "flatSpark.components.*";
+		
+		s|Button {
+			skinClass: ClassReference("flatSpark.skins.ButtonSkin");
+		}
+		
+		s|TextInput {
+			skinClass: ClassReference("flatSpark.skins.TextInputSkin");
+		}
+		
+		s|CheckBox {
+			skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+		}
+		
+		s|RadioButton {
+			skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+		}
+		
+		s|CheckBox {
+			skinClass: ClassReference("flatSpark.skins.CheckBoxSkin");
+		}
+		
+		s|RadioButton {
+			skinClass: ClassReference("flatSpark.skins.RadioButtonSkin");
+		}
+		
+		s|TitleWindow {
+			skinClass: ClassReference("flatSpark.skins.TitleWindowSkin");
+		}
+		
+		s|Panel {
+			skinClass: ClassReference("flatSpark.skins.PanelSkin");
+		}
+		
+		s|ComboBox {
+			skinClass: ClassReference("flatSpark.skins.ComboBoxSkin");
+		}
+		
+		s|DropDownList {
+			skinClass: ClassReference("flatSpark.skins.DropDownListSkin");
+		}
+		
+		ns|ProgressBar {
+			skinClass: ClassReference("flatSpark.skins.ProgressBarSkin");
+		}
+	</fx:Style>
+	
 	<fx:Script>
 		<![CDATA[
 			import mx.managers.PopUpManager;
@@ -11,8 +62,7 @@
 			import flatSpark.enums.TextInputSizeEnum;
 			import flatSpark.skins.ScrollerSkin;
 			import flatSpark.utils.AwesomeUtils;
-			
-			
+						
 			protected function clickButton(event:Event):void
 			{
 				// TODO Auto-generated method stub
@@ -20,10 +70,8 @@
 				testeTitleWindow = new TestTitleWindow();
 				testeTitleWindow.setStyle("modalTransparency",0.85);
 				testeTitleWindow.setStyle("modalTransparencyBlur",1);
-				testeTitleWindow.setStyle("modalTransparencyColor", 0x000000); //2c3e50
+				testeTitleWindow.setStyle("modalTransparencyColor", 0x000000);
 				PopUpManager.addPopUp(testeTitleWindow, this, true);
-				
-				
 			}
 			
 		]]>
@@ -38,22 +86,22 @@
 	<s:Scroller width="100%" height="100%">
 		<s:VGroup paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10" gap="20" width="100%" height="100%">
 			<s:HGroup gap="20" width="100%">
-				<components:Button label="Primary Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Primary}"/>
-				<components:Button label="Warning Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Warning}"/>
-				<components:Button label="Default Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Default}"/>
-				<components:Button label="Danger Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Danger}"/>
+				<components:ButtonIcon label="Primary Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Primary}"/>
+				<components:ButtonIcon label="Warning Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Warning}"/>
+				<components:ButtonIcon label="Default Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Default}"/>
+				<components:ButtonIcon label="Danger Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Danger}"/>
 			</s:HGroup>
 			<s:HGroup gap="20" width="100%">
-				<components:Button label="Success Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Success}"/>
-				<components:Button label="Inverse Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}"/>
-				<components:Button iconFont="{AwesomeUtils.fa_info_circle}" label="Info Button" height="{ButtonSizeEnum.Large}"  width="213" brand="{BrandColorEnum.Info}"/>
-				<components:Button label="Disabled Button" width="213" height="{ButtonSizeEnum.Large}" enabled="false" brand="{BrandColorEnum.Danger}"/>
+				<components:ButtonIcon label="Success Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Success}"/>
+				<components:ButtonIcon label="Inverse Button" width="213" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}"/>
+				<components:ButtonIcon iconFont="{AwesomeUtils.fa_info_circle}" label="Info Button" height="{ButtonSizeEnum.Large}"  width="213" brand="{BrandColorEnum.Info}"/>
+				<components:ButtonIcon label="Disabled Button" width="213" height="{ButtonSizeEnum.Large}" enabled="false" brand="{BrandColorEnum.Danger}"/>
 			</s:HGroup>
 			<s:HGroup gap="20" width="100%">
-				<components:Button label="Extra Small" height="{ButtonSizeEnum.ExtraSmall}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
-				<components:Button label="Small" height="{ButtonSizeEnum.Small}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
-				<components:Button label="Normal" height="{ButtonSizeEnum.Normal}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
-				<components:Button label="Large" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}" />
+				<components:ButtonIcon label="Extra Small" height="{ButtonSizeEnum.ExtraSmall}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+				<components:ButtonIcon label="Small" height="{ButtonSizeEnum.Small}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+				<components:ButtonIcon label="Normal" height="{ButtonSizeEnum.Normal}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}"/>
+				<components:ButtonIcon label="Large" height="{ButtonSizeEnum.Large}" brand="{BrandColorEnum.Inverse}" iconFont="{AwesomeUtils.fa_star_o}" />
 			</s:HGroup>
 			
 			<s:Label id="iconFont" color="0x000000" text="{AwesomeUtils.fa_flag}"
@@ -61,15 +109,15 @@
 			</s:Label>
 			
 			<s:HGroup>
-				<components:TextInput id="teste" prompt="Error" />
-				<components:TextInput text="No Icon" />
-				<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}"/>
-				<components:TextInput enabled="false"  iconFont="{AwesomeUtils.fa_star}" text="disabled"/>
+				<components:TextInputIcon id="teste" prompt="Error" />
+				<components:TextInputIcon text="No Icon" />
+				<components:TextInputIcon width="200" iconFont="{AwesomeUtils.fa_user}"/>
+				<components:TextInputIcon enabled="false"  iconFont="{AwesomeUtils.fa_star}" text="disabled"/>
 			</s:HGroup>
 			<s:HGroup>
-				<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Small" height="{TextInputSizeEnum.Small}"/>
-				<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Normal" height="{TextInputSizeEnum.Normal}"/>
-				<components:TextInput width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Large" height="{TextInputSizeEnum.Large}"/>
+				<components:TextInputIcon width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Small" height="{TextInputSizeEnum.Small}"/>
+				<components:TextInputIcon width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Normal" height="{TextInputSizeEnum.Normal}"/>
+				<components:TextInputIcon width="200" iconFont="{AwesomeUtils.fa_user}" prompt="Large" height="{TextInputSizeEnum.Large}"/>
 			</s:HGroup>
 			
 			<s:HGroup>
@@ -80,17 +128,17 @@
 			</s:HGroup>
 			
 			<s:HGroup>
-				<components:CheckBox label="Test"/>
-				<components:CheckBox label="Selecionado" selected="true"/>
-				<components:CheckBox label="Desabilitado" selected="true" enabled="false"/>
-				<components:CheckBox label="Desabilitado" enabled="false"/>
+				<s:CheckBox label="Test"/>
+				<s:CheckBox label="Selecionado" selected="true"/>
+				<s:CheckBox label="Desabilitado" selected="true" enabled="false"/>
+				<s:CheckBox label="Desabilitado" enabled="false"/>
 			</s:HGroup>
 			
 			<s:HGroup>
-				<components:RadioButton label="Test" groupName="grupo1"/>
-				<components:RadioButton label="Test 2" selected="true" groupName="grupo1"/>
-				<components:RadioButton label="Desabilitado" groupName="grupo2" selected="true" enabled="false"/>
-				<components:RadioButton label="Desabilitado" groupName="grupo2"  enabled="false"/>
+				<s:RadioButton label="Test" groupName="grupo1"/>
+				<s:RadioButton label="Test 2" selected="true" groupName="grupo1"/>
+				<s:RadioButton label="Desabilitado" groupName="grupo2" selected="true" enabled="false"/>
+				<s:RadioButton label="Desabilitado" groupName="grupo2"  enabled="false"/>
 			</s:HGroup>
 			
 			<s:HGroup>
@@ -154,7 +202,7 @@
 				<s:Panel width="555" height="300" title="Panel title 2">
 					<s:Label left="10" top="10" fontFamily="Lato" fontSize="16" color="0x000000" text="Panel content"/>
 					<s:controlBarContent>
-						<s:Button label="Help"/>
+						<components:ButtonIcon brand="{BrandColorEnum.Primary}" label="Help"/>
 					</s:controlBarContent>
 				</s:Panel>
 			</s:HGroup>

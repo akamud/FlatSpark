@@ -10,12 +10,10 @@
     <classEntry path="flatSpark.enums.ButtonColorEnum"/>
     <classEntry path="flatSpark.enums.BrandColorEnum"/>
     <classEntry path="flatSpark.skins.TextInputSkin"/>
-    <classEntry path="flatSpark.components.TextInput"/>
+    <classEntry path="flatSpark.components.TextInputIcon"/>
     <classEntry path="flatSpark.skins.ToggleSwitchSkin"/>
     <classEntry path="flatSpark.components.ToggleSwitch"/>
     <classEntry path="flatSpark.skins.CheckBoxSkin"/>
-    <classEntry path="flatSpark.components.CheckBox"/>
-    <classEntry path="flatSpark.components.RadioButton"/>
     <classEntry path="flatSpark.skins.RadioButtonSkin"/>
     <classEntry path="flatSpark.skins.TitleWindowSkin"/>
     <classEntry path="flatSpark.skins.TitleWindowCloseButtonSkin"/>

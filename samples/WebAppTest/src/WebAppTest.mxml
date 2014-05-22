@@ -51,16 +51,30 @@
 		ns|ProgressBar {
 			skinClass: ClassReference("flatSpark.skins.ProgressBarSkin");
 		}
+		
+		ns|Alert {
+			skinClass: ClassReference("flatSpark.skins.AlertSkin");
+		}
+		
+		global
+		{
+			modal-transparency: 0.85;
+			modal-transparency-blur: 1;
+			modal-transparency-color: #000000;
+		}
+		
+		
 	</fx:Style>
 	
 	<fx:Script>
 		<![CDATA[
 			import mx.managers.PopUpManager;
 			
+			import spark.components.Alert;
+			
 			import flatSpark.enums.BrandColorEnum;
 			import flatSpark.enums.ButtonSizeEnum;
 			import flatSpark.enums.TextInputSizeEnum;
-			import flatSpark.skins.ScrollerSkin;
 			import flatSpark.utils.AwesomeUtils;
 						
 			protected function clickButton(event:Event):void
@@ -68,11 +82,17 @@
 				// TODO Auto-generated method stub
 				var testeTitleWindow:TestTitleWindow;	
 				testeTitleWindow = new TestTitleWindow();
-				testeTitleWindow.setStyle("modalTransparency",0.85);
-				testeTitleWindow.setStyle("modalTransparencyBlur",1);
-				testeTitleWindow.setStyle("modalTransparencyColor", 0x000000);
+//				testeTitleWindow.setStyle("modalTransparency",0.85);
+//				testeTitleWindow.setStyle("modalTransparencyBlur",1);
+//				testeTitleWindow.setStyle("modalTransparencyColor", 0x000000);
 				PopUpManager.addPopUp(testeTitleWindow, this, true);
 			}
+			
+			public function alertButton(event:Event):void
+			{
+				Alert.show("To-do: Need to adjust the styles for buttons", "Alert title", Alert.OK | Alert.CANCEL | Alert.YES | Alert.NO);//, this, onAlertClosed , imgCls, 2 );	
+			}
+			
 			
 		]]>
 	</fx:Script>
@@ -143,7 +163,7 @@
 			
 			<s:HGroup>
 				<s:Button label="Open PopUp" click="{clickButton(event)}"/>
-				<s:Button label="Open Default" click="{clickButton(event)}"/>
+				<s:Button label="Open Alert" click="{alertButton(event)}"/>
 			</s:HGroup>
 			
 			<s:HGroup>
@@ -206,6 +226,7 @@
 					</s:controlBarContent>
 				</s:Panel>
 			</s:HGroup>
-		</s:VGroup>			
+			
+		</s:VGroup>
 	</s:Scroller>
 </s:Application>

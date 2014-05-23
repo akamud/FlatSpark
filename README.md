@@ -19,3 +19,4 @@ Pull-requests are more than welcome!
 
 ## Prerequisites
 Apache Flex 4.12.1
+Flash Player 10.2

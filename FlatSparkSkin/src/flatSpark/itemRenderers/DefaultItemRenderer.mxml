@@ -25,7 +25,7 @@
 		</s:fill>
 	</s:Rect>
 	
-	<s:Label text="{data}" paddingRight="4" paddingTop="1" paddingBottom="1" paddingLeft="4" 
+	<s:Label id="labelDisplay" paddingRight="4" paddingTop="1" paddingBottom="1" paddingLeft="4" 
 			 verticalAlign="middle" height="100%" fontFamily="Lato" fontSize="15" fontWeight="normal" 
 			 fontStyle="normal" color="{ColorUtils.Clouds}" color.hovered="{ColorUtils.Silver}"/>
 	

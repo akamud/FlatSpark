@@ -95,7 +95,3 @@ components|ButtonIcon {
 components|TextInputIcon {
 	skinClass: ClassReference("flatSpark.skins.TextInputIconSkin");
 }
-
-components|ToggleSwitch {
-	skinClass: ClassReference("flatSpark.skins.ToggleSwitchSkin");
-}

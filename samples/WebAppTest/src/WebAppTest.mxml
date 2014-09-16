@@ -141,13 +141,6 @@
 			</s:HGroup>
 			
 			<s:HGroup>
-				<components:ToggleSwitch/>
-				<components:ToggleSwitch selectedLabel="Test 1" deselectedLabel="Test 2" selected="true"/>
-				<components:ToggleSwitch selectedLabel="Disabled" deselectedLabel="Disabled" selected="true" enabled="false"/>
-				<components:ToggleSwitch selectedLabel="Disabled" deselectedLabel="Disabled" enabled="false"/>
-			</s:HGroup>
-			
-			<s:HGroup>
 				<s:CheckBox label="Test"/>
 				<s:CheckBox label="Selecionado" selected="true"/>
 				<s:CheckBox label="Desabilitado" selected="true" enabled="false"/>

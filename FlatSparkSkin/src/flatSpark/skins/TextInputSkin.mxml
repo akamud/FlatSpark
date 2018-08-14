@@ -76,7 +76,17 @@
                 return exclusions_4_0;
             }
             
-            return exclusions;
+			var outArray:Array = new Array();
+			for (var i:int = 0; i < exclusions.length; i++) {
+				try {
+					this[exclusions[i]];
+					outArray.push(exclusions[i]);
+				} catch(error:Error) {
+					trace("Parametro non esistente: " + exclusions[i]);
+				}
+				
+			}
+            return outArray;
         }
         
         /* Define the content fill items that should be colored by the "contentBackgroundColor" style. */
